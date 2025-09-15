@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Kritik dan Saran K3L & Keamanan UP2WV</title>
+    <title>Dashboard Kritik dan Saran K3L & Keamanan UP2WI</title>
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/9/97/Logo_PLN.png" type="image/png" />
     @vite('resources/css/app.css')
     <style>
@@ -46,7 +46,7 @@
             KRITIK DAN SARAN K3L & KEAMANAN
             </h1>
             <h2 class="text-xs sm:text-sm text-white font-semibold">
-            PLN PUSHARLIS UP2W V
+            PLN PUSHARLIS UP2W I
             </h2>
         </div>
 
@@ -56,7 +56,7 @@
                 KRITIK DAN SARAN K3L & KEAMANAN
             </h1>
             <h2 class="text-sm sm:text-base md:text-xl text-white font-semibold mt-1">
-            PLN PUSHARLIS UP2W V
+            PLN PUSHARLIS UP2W I
             </h2>
         </div>
 
@@ -92,7 +92,7 @@
             @csrf
 
             <div class="bg-white p-4 rounded-lg shadow-sm">
-                <label class="block font-semibold mb-1">Kritik dan saran demi kemajuan K3L & Keamanan PLN PUSHARLIS UP2WVI kedepannya <span class="text-red-500">*</span></label>
+                <label class="block font-semibold mb-1">Kritik dan saran demi kemajuan K3L & Keamanan PLN PUSHARLIS UP2W I kedepannya <span class="text-red-500">*</span></label>
                 <textarea name="saran" rows="5" class="w-full border border-gray-300 rounded-lg px-4 py-2" required></textarea>
             </div>
 
