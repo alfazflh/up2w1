@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard Peralatan Tanggap Darurat UP2WV - APAB</title>
+    <title>Dashboard Peralatan Tanggap Darurat UP2WI - APAB</title>
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/9/97/Logo_PLN.png" type="image/png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite('resources/css/app.css')
@@ -47,7 +47,7 @@
             MONITORING ALAT PEMADAM API BERAT
             </h1>
             <h2 class="text-xs sm:text-sm text-white font-semibold">
-            PLN PUSHARLIS UP2W V
+            PLN PUSHARLIS UP2W I
             </h2>
         </div>
 
@@ -57,7 +57,7 @@
                 MONITORING ALAT PEMADAM API BERAT
             </h1>
             <h2 class="text-sm sm:text-base md:text-xl text-white font-semibold mt-1">
-            PLN PUSHARLIS UP2W V
+            PLN PUSHARLIS UP2W I
             </h2>
         </div>
 
