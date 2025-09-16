@@ -443,6 +443,7 @@
                                         'id_firealarm' => $pemeriksaan->id_firealarm,
                                         'tanggal' => \Carbon\Carbon::parse($pemeriksaan->tanggal_pemeriksaan)->locale('id')->translatedFormat('d F Y'),
                                         'lokasi' => $pemeriksaan->lokasi,
+                                        'nama' => $pemeriksaan->nama,
                                         'kondisi_fisik' => $pemeriksaan->kondisi_fisik,
                                         'fungsi' => $pemeriksaan->fungsi,
                                         'kesimpulan' => $pemeriksaan->kesimpulan,
@@ -556,7 +557,9 @@
             margin-top: 15px;
             table-layout: fixed;">
         <tr>
-            <td style="border: 1px solid black; padding: 3px; width: 5%;">NO. SERI</td>
+            <td style="border: 1px solid black; padding: 3px; width: 18%;">NAMA BARANG</td>
+            <td style="border: 1px solid black; padding: 3px; width: 32%;">: <span id="detail-nama">-</span></td>
+            <td style="border: 1px solid black; padding: 3px; width: 18%;">NO. SERI</td>
             <td style="border: 1px solid black; padding: 3px; width: 32%;">: <span id="detail-nomor">-</span></td>
         </tr>
         <tr>
