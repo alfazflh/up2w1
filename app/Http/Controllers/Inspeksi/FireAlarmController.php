@@ -34,6 +34,7 @@ class FireAlarmController extends Controller
     $request->validate([
         'id_firealarm' => 'required|string|max:255',
         'lokasi' => 'required|string',
+        'nama' => 'required|string',
         'catatan' => 'required|string',
     ]);
 
@@ -41,6 +42,7 @@ class FireAlarmController extends Controller
     FireAlarm::create([
         'id_firealarm' => $request->id_firealarm,
         'lokasi' => $request->lokasi,
+        'nama' => $request->nama,
         'catatan' => $request->catatan,
     ]);
 
