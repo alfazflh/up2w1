@@ -297,7 +297,7 @@ margin-top: 0;
 .signature-section img {
     height: 100px;
     margin: 0;
-    margin-bottom: -20px; 
+    margin-bottom: -5px; 
     z-index: 1;
     position: relative;
 }
