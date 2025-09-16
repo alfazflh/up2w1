@@ -623,7 +623,7 @@
                 <span class="font-normal" id="tanggal-bawah">-</span>
                 <p>Team Leader K3L & Kam</p>
                 <img src="https://ik.imagekit.io/pln/ttdup2w5.png" alt="Tanda Tangan">
-                <p>REFGINANDA AKNUR</p>
+                <p>RIZKY PERMANA ANANDA</p>
             </div>
         </div>
     </div>
