@@ -109,7 +109,7 @@
             @csrf
             <div class="mb-4">
                 <label class="block text-gray-700 font-semibold mb-1">ID APAB</label>
-                <input type="text" name="id_apab" required class="w-full px-3 py-2 border rounded" placeholder="cth: A2.01">
+                <input type="text" name="id_apab" required class="w-full px-3 py-2 border rounded" placeholder="cth: A3.001">
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 font-semibold mb-1">Lokasi</label>
