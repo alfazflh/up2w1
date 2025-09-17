@@ -648,6 +648,7 @@ function showDetail(data) {
     try {
         document.getElementById('detail-lokasi').innerText = data.lokasi || '-';
         document.getElementById('detail-nomor').innerText = data.id_firealarm || '-';
+        document.getElementById('detail-nama').innerText = data.nama || '-';
         document.getElementById('detail-tanggal').innerText = data.tanggal || '-';
         document.getElementById('detail-catatan').innerText = data.catatan || '-';
         const tglFormatted = tanggalbawah(data.tanggal);
