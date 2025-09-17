@@ -652,7 +652,7 @@ function showDetail(data) {
         document.getElementById('detail-tanggal').innerText = data.tanggal || '-';
         document.getElementById('detail-catatan').innerText = data.catatan || '-';
         const tglFormatted = tanggalbawah(data.tanggal);
-        document.getElementById('tanggal-bawah').innerText = `Semarang, ${tglFormatted}`;
+        document.getElementById('tanggal-bawah').innerText = `Cilegon, ${tglFormatted}`;
 
         const tanggalPemeriksaan = data.tanggal || '';
         const tahunMatch = tanggalPemeriksaan.match(/\d{4}/);
