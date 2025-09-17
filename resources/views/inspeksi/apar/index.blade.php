@@ -104,7 +104,7 @@
 <!-- Modal -->
 <div id="modal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center hidden z-50">
     <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-md relative">
-        <h2 class="text-xl font-bold mb-4">Tambah APA Baru</h2>
+        <h2 class="text-xl font-bold mb-4">Tambah APAR Baru</h2>
         <form action="{{ route('apar.store') }}" method="POST">
             @csrf
             <div class="mb-4">
