@@ -120,7 +120,7 @@
                 <input type="text" name="isi_apar" required class="w-full px-3 py-2 border rounded">
             </div>
             <div class="mb-4">
-                <label class="block text-gray-700 font-semibold mb-1">Kapasitas (Kg</label>
+                <label class="block text-gray-700 font-semibold mb-1">Kapasitas (Kg)</label>
                 <input 
                     type="text" 
                     name="kapasitas" 
