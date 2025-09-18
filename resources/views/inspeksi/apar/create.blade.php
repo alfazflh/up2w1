@@ -88,7 +88,7 @@
 
 
     <div class="px-5 sm:px-6 md:px-8 lg:px-10">
-        <form id="pemeriksaan-form" action="{{ route('pemeriksaan.store') }}" method="POST"
+        <form id="pemeriksaan-form" action="{{ route('pemeriksaan-apar.store') }}" method="POST"
         class="max-w-3xl mx-auto py-6 mt-8 mb-10 bg-gray-100 rounded-xl shadow-lg space-y-6 px-6 sm:px-8">    
             @csrf
     
@@ -189,7 +189,7 @@
 
 <script>
 document.getElementById('submit-btn').addEventListener('click', function () {
-  const form = document.getElementById('form-inspeksi');
+  const form = document.getElementById('pemeriksaan-form');
   const idApar = document.querySelector('input[name="id_apar"]').value;
 
   // buat FormData dari form
