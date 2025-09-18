@@ -189,7 +189,7 @@
 
 <script>
 document.getElementById('submit-btn').addEventListener('click', function () {
-  const form = document.getElementById('pemeriksaan-form');
+  const form = document.getElementById('form-inspeksi');
   const idApar = document.querySelector('input[name="id_apar"]').value;
 
   // buat FormData dari form
