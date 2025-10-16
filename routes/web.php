@@ -26,7 +26,7 @@ Route::get('/', fn () => view('welcome'))->name('welcome');
 Route::prefix('pemeriksaan-apar')->group(function () {
     Route::post('/store', [PemeriksaanAparController::class, 'store'])->name('pemeriksaan-apar.store');
     Route::delete('/{id}', [PemeriksaanAparController::class, 'destroy'])->name('pemeriksaan-apar.destroy');
-    Route::get('/{id}/edit-form', [PemeriksaanAparController::class, 'editForm']);
+    Route::get('/{id}/edit-form', [PemeriksaanAparController::class, 'editForm'])->name('pemeriksaan-apar.edit-form');
     Route::put('/{id}', [PemeriksaanAparController::class, 'update'])->name('pemeriksaan-apar.update');
 });
 
@@ -34,7 +34,7 @@ Route::prefix('pemeriksaan-apar')->group(function () {
 Route::prefix('pemeriksaan-apab')->group(function () {
     Route::post('/store', [PemeriksaanApabController::class, 'store'])->name('pemeriksaan-apab.store');
     Route::delete('/{id}', [PemeriksaanApabController::class, 'destroy'])->name('pemeriksaan-apab.destroy');
-    Route::get('/{id}/edit-form', [PemeriksaanApabController::class, 'editForm']);
+    Route::get('/{id}/edit-form', [PemeriksaanApabController::class, 'editForm'])->name('pemeriksaan-apab.edit-form');
     Route::put('/{id}', [PemeriksaanApabController::class, 'update'])->name('pemeriksaan-apab.update');
 });
 
@@ -44,7 +44,9 @@ Route::prefix('inspeksi')->group(function () {
     Route::controller(AparController::class)->prefix('apar')->group(function () {
         Route::get('/', 'index')->name('apar.index');
         Route::get('/{id_apar}', 'show')->name('apar.show');
-        Route::get('/{id_apar}/inspeksi', 'create')->name('apar.inspeksi');
+        Route::get('/{id_apar}/inspeksi', 'create')
+        ->name('apar.inspeksi')
+        ->middleware('auth');
         Route::get('/{id_apar}/hasil', 'hasil')->name('apar.hasil');
         Route::post('/store', 'store')->name('apar.store');
     });
@@ -52,7 +54,9 @@ Route::prefix('inspeksi')->group(function () {
     Route::controller(ApabController::class)->prefix('apab')->group(function () {
         Route::get('/', 'index')->name('apab.index');
         Route::get('/{id_apab}', 'show')->name('apab.show');
-        Route::get('/{id_apab}/inspeksi', 'create')->name('apab.inspeksi');
+        Route::get('/{id_apab}/inspeksi', 'create')
+        ->name('apab.inspeksi')
+        ->middleware('auth');
         Route::get('/{id_apab}/hasil', 'hasil')->name('apab.hasil');
         Route::post('/store', 'store')->name('apab.store');
     });
@@ -60,7 +64,9 @@ Route::prefix('inspeksi')->group(function () {
     Route::controller(ApatController::class)->prefix('apat')->group(function () {
         Route::get('/', 'index')->name('apat.index');
         Route::get('/{id_apat}', 'show')->name('apat.show');
-        Route::get('/{id_apat}/inspeksi', 'create')->name('apat.inspeksi');
+        Route::get('/{id_apat}/inspeksi', 'create')
+        ->name('apat.inspeksi')
+        ->middleware('auth');
         Route::get('/{id_apat}/hasil', 'hasil')->name('apat.hasil');
         Route::post('/store', 'store')->name('apat.store');
     });
@@ -75,7 +81,9 @@ Route::prefix('inspeksi')->group(function () {
     Route::controller(FireAlarmController::class)->prefix('fire-alarm')->group(function () {
         Route::get('/', 'index')->name('fire_alarm.index');
         Route::get('/{id_firealarm}', 'show')->name('fire_alarm.show');
-        Route::get('/{id_firealarm}/inspeksi', 'create')->name('fire_alarm.inspeksi');
+        Route::get('/{id_firealarm}/inspeksi', 'create')
+        ->name('fire_alarm.inspeksi')
+        ->middleware('auth');
         Route::get('/{id_firealarm}/hasil', 'hasil')->name('fire_alarm.hasil');
         Route::post('/store', 'store')->name('fire_alarm.store');
     });
@@ -90,7 +98,9 @@ Route::prefix('inspeksi')->group(function () {
     Route::controller(HydrantBoxController::class)->prefix('hydrant-box')->group(function () {
         Route::get('/', 'index')->name('boxhydrant.index');
         Route::get('/{id_boxhydrant}', 'show')->name('boxhydrant.show');
-        Route::get('/{id_boxhydrant}/inspeksi', 'create')->name('boxhydrant.inspeksi');
+        Route::get('/{id_boxhydrant}/inspeksi', 'create')
+        ->name('boxhydrant.inspeksi')
+        ->middleware('auth');
         Route::get('/{id_boxhydrant}/hasil', 'hasil')->name('boxhydrant.hasil');
         Route::post('/store', 'store')->name('boxhydrant.store');
     });
@@ -105,7 +115,9 @@ Route::prefix('inspeksi')->group(function () {
     Route::controller(RumahPompaController::class)->prefix('rumah-pompa')->group(function () {
         Route::get('/', 'index')->name('rumah_pompa.index');
         Route::get('/{id_rumah}', 'show')->name('rumah_pompa.show');
-        Route::get('/{id_rumah}/inspeksi', 'create')->name('rumah_pompa.inspeksi');
+        Route::get('/{id_rumah}/inspeksi', 'create')
+        ->name('rumah_pompa.inspeksi')
+        ->middleware('auth');;
         Route::get('/{id_rumah}/hasil', 'hasil')->name('rumah_pompa.hasil');
         Route::post('/store', 'store')->name('rumah_pompa.store');
     });
@@ -123,7 +135,9 @@ Route::prefix('inspeksi')->group(function () {
     Route::controller(P3kController::class)->prefix('kotak-p3k')->group(function () {
         Route::get('/', 'index')->name('p3k.index');
         Route::get('/{id_p3k}', 'show')->name('p3k.show');
-        Route::get('/{id_p3k}/inspeksi', 'create')->name('p3k.inspeksi');
+        Route::get('/{id_p3k}/inspeksi', 'create')
+        ->name('p3k.inspeksi')
+        ->middleware('auth');
         Route::get('/{id_p3k}/hasil', 'hasil')->name('p3k.hasil');
         Route::get('/{id_p3k}/pemakaian', 'pemakaian')->name('p3k.pemakaian');
         Route::get('/{id_p3k}/hasilpemakaian', 'hasilpemakaian')->name('p3k.hasilpemakaian');
@@ -155,7 +169,9 @@ Route::prefix('inspeksi')->group(function () {
 
     Route::prefix('inspeksi')->name('inspeksi.')->group(function () {
         Route::get('/dokumen/hasil', [DokumenIkaController::class, 'hasil'])->name('dokumen.hasil');
-        Route::get('/dokumen/create', [DokumenIkaController::class, 'create'])->name('dokumen.create');
+        Route::get('/dokumen/create', [DokumenIkaController::class, 'create'])
+        ->name('dokumen.create')
+        ->middleware('auth');;
         Route::post('/dokumen', [DokumenIkaController::class, 'store'])->name('dokumen.store');
         Route::get('/dokumen/{id}/edit', [DokumenIkaController::class, 'edit'])->name('dokumen.edit');
         Route::put('/dokumen/{id}', [DokumenIkaController::class, 'update'])->name('dokumen.update');
